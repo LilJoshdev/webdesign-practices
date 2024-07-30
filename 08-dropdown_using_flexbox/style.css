@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-area a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: coral;
+    height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.menu-area a:hover{
+    color: white;
+    background-color: tomato;
+}
+.menu-area ul{
+    list-style: none;
+    display: flex;
+    z-index: 10;
+}
+.menu-area ul li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.menu-area li:hover .dropdown-1 > li{
+    top: 0;
+    display: block;
+}
+.dropdown-1 li{
+    display: none;
+    position: relative;
+}
+.dropdown-1{
+  position: absolute;
+  display: flex;
+  flex-direction: column;  
+  width: 100%;
+}
+.dropdown-1 li:hover .dropdown-2 li{
+    display: block;
+
+}
+.dropdown-2 ul li{
+    display: none;
+}
+.dropdown-2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+} 
+.banner-area{
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(car-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 50px);
+}
+.banner-area h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: monospace;
+
+}

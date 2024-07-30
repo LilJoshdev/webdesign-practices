@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-area a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #262626;
+    height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-area a:hover{
+    background: #565656;
+    color: white;
+}
+.menu-area ul{
+    list-style: none;
+    display: flex;
+    z-index: 10;
+}
+.menu-area ul li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.menu-area li:hover .menu-one > li{
+    display: block;
+    top: 0;
+}
+.menu-one li{
+    display: none;
+    position: relative;
+}
+.menu-one{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.menu-one li:hover .menu-two li{
+    display: block;
+}
+.menu-two li{
+    display: none;
+}
+.menu-two {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 100%;
+    top: 0;
+    width: 200px;
+}
+.banner-area{
+    background-image: url(nature-3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+}
+.banner-area h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 3px #252225;
+}
